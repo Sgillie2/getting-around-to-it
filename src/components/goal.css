@@ -1,0 +1,15 @@
+.Goal {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 150px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.Goal:focus {
+    border: 2px solid #888;
+    outline: none;
+}
