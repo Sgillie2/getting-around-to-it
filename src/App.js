@@ -1,8 +1,7 @@
-// src/App.js
-
 import React, { Component } from 'react';
+
 import Goal from "./components/goal";
-import Month from "./components/month";
+import Group from "./components/group";
 
 class App extends Component {
 
@@ -12,7 +11,7 @@ class App extends Component {
         <h1 text-allign="center">Getting Around To It</h1>
         <Goal text-allign="center"/>
         <br/>
-        <Month/>
+        <Group/>
       </div>
 
     );

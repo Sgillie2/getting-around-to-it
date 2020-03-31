@@ -1,5 +1,3 @@
-// src/components/goal.js
-
 import React from "react";
 import "./goal.css"
 

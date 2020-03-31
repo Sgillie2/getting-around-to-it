@@ -1,9 +1,7 @@
-// src/components/month.js
-
 import React from "react";
-import "./month.css";
+import "./group.css";
 
-class Month extends React.Component {
+class Group extends React.Component {
     render() {
         return (
             <table style={{ width: "80%" }} class="center">
@@ -16,15 +14,15 @@ class Month extends React.Component {
                     <th>Week 4 Update</th>
                     <th>Reflection</th>
                 </tr>
-                <User></User>
-                <User></User>
-                <User></User>
+                <Member></Member>
+                <Member></Member>
+                <Member></Member>
             </table>
         );
     }
 }
 
-class User extends React.Component {
+class Member extends React.Component {
 
     constructor(props) {
         super(props);
@@ -65,4 +63,4 @@ class User extends React.Component {
     }
 }
 
-export default Month
+export default Group

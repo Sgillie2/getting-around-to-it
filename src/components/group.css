@@ -8,6 +8,7 @@ table {
     display: block;
     position: relative;
     overflow-y: scroll;
+    scroll-snap-type: x proximity;
 
     max-height: 55vh;
     min-height: 300px;
@@ -20,7 +21,7 @@ table {
 th, td {
     border: 1px solid #ccc;
     padding: 5px;
-    min-width: 350px;
+    min-width: 270px;           /* found to be ideal size for iphone X viewing */
     background-color: #fff;
 }
 
@@ -40,3 +41,8 @@ th.name, td.name {
 }
 
 
+@media only screen and (max-width: 800px) {
+    td{
+        scroll-snap-align: center;
+    }
+}
