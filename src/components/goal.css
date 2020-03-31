@@ -1,6 +1,7 @@
-.Goal {
+textarea {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 150px;
+    height: 20vh;
+    width: 40vw;
     padding: 12px 16px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -9,7 +10,11 @@
     resize: none;
 }
 
-.Goal:focus {
+textarea:focus {
     border: 2px solid #888;
     outline: none;
+}
+
+input[type=submit] {
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
