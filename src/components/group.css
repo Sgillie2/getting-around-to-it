@@ -1,3 +1,4 @@
+/* Group */
 table {
     /* styling */
     border: 2px solid #ccc;
@@ -10,39 +11,10 @@ table {
     overflow-y: scroll;
     scroll-snap-type: x proximity;
 
-    max-height: 55vh;
+    max-height: 75vh;
     min-height: 300px;
 
     /* positioning */
     margin-left: auto;
     margin-right: auto;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 5px;
-    min-width: 270px;           /* found to be ideal size for iphone X viewing */
-    background-color: #fff;
-}
-
-th {
-    position: sticky;
-    height: 40px;
-    top: 0;
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
-}
-
-td {
-    height: 100px;
-}
-
-th.name, td.name {
-    min-width: inherit;
-}
-
-
-@media only screen and (max-width: 800px) {
-    td{
-        scroll-snap-align: center;
-    }
 }
