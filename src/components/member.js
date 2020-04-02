@@ -18,14 +18,17 @@ class Member extends React.Component {
             week4: props.week4 || '',
             reflection: props.reflection || '',
         };
-
-        this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit(event) {
-        event.preventDefault();
-        let newState = Object.assign({}, this.state, { editable: false });
-        this.setState(newState);
+    renderEditor(field, placeholder) {
+        return (
+            <Editor
+                value={this.state[field]}
+                placeholder={placeholder}
+                onSubmit={() => { this.setState({editable: false}) }}
+                onChange={(event) => { this.setState( Object.fromEntries([[field, event.target.value]]) ) }}
+            />
+        );
     }
 
     render() {
@@ -33,12 +36,12 @@ class Member extends React.Component {
             return (
                 <tr>
                     <td className="name">{this.state.name}</td>
-                    <td><Editor value={this.state.goal} onSubmit={this.onSubmit} onChange={(event) => this.setState({goal: event.target.value})} placeholder="A few sentences about what you want to do" /></td>
-                    <td><Editor value={this.state.week1} onSubmit={this.onSubmit} onChange={(event) => this.setState({week1: event.target.value})} placeholder="Progress, Setbacks, and Discoveries" /></td>
-                    <td><Editor value={this.state.week2} onSubmit={this.onSubmit} onChange={(event) => this.setState({week2: event.target.value})} placeholder="Progress, Setbacks, and Discoveries" /></td>
-                    <td><Editor value={this.state.week3} onSubmit={this.onSubmit} onChange={(event) => this.setState({week3: event.target.value})} placeholder="Progress, Setbacks, and Discoveries" /></td>
-                    <td><Editor value={this.state.week4} onSubmit={this.onSubmit} onChange={(event) => this.setState({week4: event.target.value})} placeholder="Progress, Setbacks, and Discoveries" /></td>
-                    <td><Editor value={this.state.reflection} onSubmit={this.onSubmit} onChange={(event) => this.setState({reflection: event.target.value})} placeholder="What you learned, and what you'd do differntly next time" /></td>
+                    <td>{this.renderEditor("goal", "A few sentences about what you'd like to do")}</td>
+                    <td>{this.renderEditor("week1", "Progress, Setbacks, and Discoveries")}</td>
+                    <td>{this.renderEditor("week2", "Progress, Setbacks, and Discoveries")}</td>
+                    <td>{this.renderEditor("week3", "Progress, Setbacks, and Discoveries")}</td>
+                    <td>{this.renderEditor("week4", "Progress, Setbacks, and Discoveries")}</td>
+                    <td>{this.renderEditor("reflection", "Progress, Setbacks, and Discoveries")}</td>
                 </tr>
             )
         } else {

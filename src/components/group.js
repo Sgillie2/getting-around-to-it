@@ -32,4 +32,4 @@ class Group extends React.Component {
     }
 }
 
-export default Group
+export default Group;

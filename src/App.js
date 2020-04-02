@@ -18,7 +18,7 @@ let defaultMembers = [
     editable={true}
     name="Morribyte"
   />,
-  <Member />,
+  <Member/>,
 ]
 
 
